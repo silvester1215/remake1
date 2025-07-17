@@ -470,35 +470,48 @@ footer {
   
   .navbar {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   .navbar nav {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
     gap: 1rem;
-    margin-top: 1rem;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    scrollbar-width: thin; /* Firefox */
+  }
+
+  .navbar nav::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .navbar nav::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
   }
 
   .navbar nav a {
-    display: block;
-    padding: 0.75rem 1rem;
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #ffffff; /* 白底 */
-    color: #005daa;            /* 藍字 */
-    border: 2px solid #005daa; /* 藍色邊框 */
-    border-radius: 8px;        /* 圓角方框 */
+    background-color: #ffffff;
+    color: #005daa;
+    border: 2px solid #005daa;
+    border-radius: 8px;
     text-decoration: none;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .navbar nav a:hover {
-    background-color: #005daa; /* hover 時變藍底白字 */
+    background-color: #005daa;
     color: #ffffff;
   }
+
 
    
 /* Library 區塊 */
