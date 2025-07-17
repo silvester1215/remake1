@@ -488,4 +488,48 @@ footer {
     overflow-x: auto;
     white-space: nowrap;
     width: 100vw;
+  
+  .navbar nav a {
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    background: #f2f2f2;
+    margin: 2px 0;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
    
+/* Library 區塊 */
+.Library {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 2rem 1rem;
+}
+
+.Library-text {
+  width: 100%;
+}
+
+.Library-text li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.Library-text a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
