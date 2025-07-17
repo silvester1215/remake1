@@ -488,26 +488,4 @@ footer {
     overflow-x: auto;
     white-space: nowrap;
     width: 100vw;
-    gap: 0.5rem;
-    padding: 0 1vw;
-    box-sizing: border-box;
-  }
-  .navbar nav a {
-    flex: 0 0 auto;
-    min-width: max-content;
-    padding: 0.5rem 0.8rem;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    background: #f2f2f2;
-    margin: 2px 0;
-    color: #333;
-    text-decoration: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .feature {
-    flex: 1 1 100%;
-  }
-}
+   
