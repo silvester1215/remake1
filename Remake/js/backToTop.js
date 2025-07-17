@@ -28,7 +28,7 @@ style.textContent = \`
   background-color: #005daa;
   color: #ffffff;
 }
-\`;
+`;
 document.head.appendChild(style);
 
 // Show or hide the button based on scroll position
