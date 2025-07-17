@@ -7,12 +7,12 @@ document.body.appendChild(backToTopBtn);
 
 // Style the button
 const style = document.createElement("style");
-style.textContent = \`
+style.textContent = `
 #backToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 9999;
   background-color: #ffffff;
   color: #005daa;
   border: 2px solid #005daa;
