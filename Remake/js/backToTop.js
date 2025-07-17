@@ -33,7 +33,7 @@ document.head.appendChild(style);
 
 // Show or hide the button based on scroll position
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
+  if (window.scrollY > 100) {
     backToTopBtn.style.display = "block";
   } else {
     backToTopBtn.style.display = "none";
