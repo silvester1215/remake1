@@ -467,69 +467,68 @@ footer {
   }
 
   /* Navbar 區塊 */
+  
   .navbar {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
-  }
-  .navbar .logo {
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
     text-align: center;
   }
+
   .navbar nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100vw;
-  
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
   .navbar nav a {
-    flex: 0 0 auto;
-    min-width: max-content;
-    padding: 0.5rem 0.8rem;
+    display: block;
+    padding: 0.75rem 1rem;
     font-size: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    background: #f2f2f2;
-    margin: 2px 0;
-    color: #333;
+    background-color: #ffffff; /* 白底 */
+    color: #005daa;            /* 藍字 */
+    border: 2px solid #005daa; /* 藍色邊框 */
+    border-radius: 8px;        /* 圓角方框 */
     text-decoration: none;
-    white-space: nowrap;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .navbar nav a:hover {
+    background-color: #005daa; /* hover 時變藍底白字 */
+    color: #ffffff;
   }
 
    
 /* Library 區塊 */
 .Library {
-  flex-direction: column;
-  align-items: stretch;
-  padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem 1rem;
+  }
+
+  .Library-text {
+    width: 100%;
+  }
+
+  .Library-text li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  .Library-text a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #0073e6;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
 }
 
-.Library-text {
-  width: 100%;
-}
-
-.Library-text li {
-  list-style: none;
-  margin-bottom: 1rem;
-}
-
-.Library-text a {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  font-size: 1rem;
-  background-color: #0073e6;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
 
