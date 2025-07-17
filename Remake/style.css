@@ -381,6 +381,13 @@ footer {
   line-height: 1.8; /* 建議值：1.5~1.8 */
 }
 
+/* 響應式調整 */
+@media (max-width: 992px) {
+  .feature {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
 @media (max-width: 768px) {
   /* Hero 區塊 */
   .hero {
@@ -404,6 +411,14 @@ footer {
   }
 
   /* Map 區塊 */
+  .map-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-container .maps img {
+    margin-bottom: 1rem;
+  }
   .map {
     flex-direction: column;
     align-items: center;
@@ -426,6 +441,16 @@ footer {
     width: 100%;
   }
 
+  /* Guide 區塊 */
+  .guide-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guide-container img {
+    height: auto;
+    width: 80%;
+  }
+
   /* Insights 區塊 */
   .insights-text {
     font-size: 1rem;
@@ -441,9 +466,48 @@ footer {
     object-fit: contain;
   }
 
-  /* Navbar */
+  /* Navbar 區塊 */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .navbar .logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .navbar nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100vw;
+    gap: 0.5rem;
+    padding: 0 1vw;
+    box-sizing: border-box;
+  }
   .navbar nav a {
-    display: block;
-    margin: 0.5rem 0;
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    background: #f2f2f2;
+    margin: 2px 0;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature {
+    flex: 1 1 100%;
   }
 }
