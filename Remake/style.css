@@ -380,3 +380,70 @@ footer {
   color: #333;
   line-height: 1.8; /* 建議值：1.5~1.8 */
 }
+
+@media (max-width: 768px) {
+  /* Hero 區塊 */
+  .hero {
+    flex-direction: column-reverse !important;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-image {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .hero-image img {
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-text {
+    width: 100%;
+  }
+
+  /* Map 區塊 */
+  .map {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .map-image {
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .map-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .map-text {
+    width: 100%;
+  }
+
+  /* Insights 區塊 */
+  .insights-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .insights-image {
+    width: 100%;
+    padding: 1rem;
+  }
+  .insights-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Navbar */
+  .navbar nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
