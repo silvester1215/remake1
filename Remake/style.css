@@ -163,6 +163,12 @@ footer {
   flex: 1;
 }
 
+.services-text h1 {
+  font-size: 2.5rem;
+  color: #003d73;
+  margin-bottom: 1rem;
+}
+
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
