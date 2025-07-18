@@ -263,6 +263,8 @@ footer {
 /* 文章列表 */
 
 .Library {
+  max-width: 100%;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   padding: 3rem 2rem;
@@ -278,6 +280,7 @@ footer {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 /* 客戶見證 */
@@ -563,7 +566,7 @@ footer {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 1rem;
+    padding: 0.75rem;
     font-size: 1rem;
     background-color: #0073e6;
     color: #fff;
