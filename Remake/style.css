@@ -276,13 +276,16 @@ footer {
 }
 
 .Library-text a {
-  background-color: #0073e6;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  box-sizing: border-box;
+  background-color: #0073e6; /* 藍色背景 */
+  color: white;              /* 白色文字 */
+  padding: 0.75rem 1.5rem;   /* 內距 */
+  font-size: 1.1rem;         /* 字體大小 */
+  line-height: 1.6;          /* 行距 */
+  text-align: left;          /* 文字靠左 */
+  display: inline-block;     /* 讓寬度配合內容 */
+  border-radius: 10px;       /* 圓角 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+  margin: 2rem 0;            /* 上下留白 */
 }
 
 /* 客戶見證 */
