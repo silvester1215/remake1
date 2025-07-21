@@ -512,8 +512,8 @@ footer {
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
-    gap: 1rem;
-    padding: 0.5rem 0;
+    gap: 0.5rem;
+    padding: 0 1vw;
     box-sizing: border-box;
     scrollbar-width: thin; /* Firefox */
   }
@@ -529,12 +529,12 @@ footer {
 
   .navbar nav a {
     flex: 0 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     font-size: 1rem;
     background-color: #ffffff;
     color: #005daa;
     border: 2px solid #005daa;
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
