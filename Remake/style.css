@@ -43,7 +43,7 @@ main {
 .navbar nav {
   display: flex;
   align-items: center;
-  gap: 2rem; /* 調整間距大小，可依需求調整 */
+  gap: 1rem; /* 調整間距大小，可依需求調整 */
 }
 
 .navbar nav a {
