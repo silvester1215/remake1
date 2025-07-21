@@ -443,6 +443,11 @@ footer {
     width: 100%;
   }
 
+  .hero-text h1 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  }
+
   /* Map 區塊 */
   .map-container {
     flex-direction: column;
