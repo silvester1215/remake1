@@ -52,7 +52,6 @@ main {
   margin-left: 1.5rem;
   font-size: 1rem;
   transition: color 0.3s ease;
-  padding-bottom: 0.5rem; /* 底部空間 */
 }
 
 .navbar nav a:hover {
