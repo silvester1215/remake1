@@ -269,7 +269,7 @@ footer {
   overflow-x: hidden;
   display: flex;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 1rem 2rem;
   background-color: #f0f6ff;
   flex-wrap: wrap;
   gap: 2rem;
