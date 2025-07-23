@@ -565,9 +565,21 @@ footer #viewCount {
     background-color: #005daa;
     color: #ffffff;
   }
+  
+  /*   頁尾   */
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  footer > div {
+    margin-bottom: 10px;
+  }
 
-   
+  footer #viewCount {
+    margin-left: 0; /* 移除桌機版的左邊距 */
+  }
+
 /* Library 區塊 */
 .Library {
     flex-direction: column;
