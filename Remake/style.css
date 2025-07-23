@@ -62,8 +62,14 @@ main {
 footer {
   background-color: #003366;
   color: #fff;
-  text-align: center;
-  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between
+  align-items: center;
+  padding: 1rem ;
+}
+
+footer #viewCount {
+  margin-left: 20px;
 }
 
 /* 頭版 */
@@ -418,10 +424,6 @@ footer {
 #backToTop:hover {
   background-color: #005daa;
   color: #ffffff;
-}
-
-#viewCount {
-  margin-left: 20px;
 }
 
 /* 響應式調整 */
