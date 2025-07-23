@@ -420,6 +420,10 @@ footer {
   color: #ffffff;
 }
 
+#viewCount {
+  margin-left: 20px;
+}
+
 /* 響應式調整 */
 @media (max-width: 992px) {
   .feature {
