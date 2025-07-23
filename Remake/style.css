@@ -265,10 +265,12 @@ footer {
 /* 文章列表 */
 
 .Library {
-  max-width: 100%;
-  overflow-x: hidden;
+  flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start; /* 垂直靠上 */
+  align-items: flex-start;     /* 水平靠左 */
+  overflow-x: hidden;
   padding: 1rem 2rem;
   background-color: #f0f6ff;
   flex-wrap: wrap;
