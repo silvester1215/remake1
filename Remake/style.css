@@ -17,7 +17,6 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-
 }
 
 main {
@@ -68,6 +67,10 @@ footer {
   padding: 1rem;
 }
 
+footer div:nth-child(2) {
+  text-align: center;
+  flex: 1;
+}
 
 footer #viewCount {
   margin-left: 20px;
