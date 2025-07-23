@@ -1,3 +1,8 @@
+// viewCounter.js（模組格式）
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js";
+
+// Firebase 設定
 const firebaseConfig = {
   apiKey: "AIzaSyDuIcIVG24Qdglr9fzFjKbPQdo7bCCdkNQ",
   authDomain: "timescount-a6205.firebaseapp.com",
@@ -9,16 +14,21 @@ const firebaseConfig = {
   measurementId: "G-CC4S2JQDP7"
 };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+// 初始化 Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
+// 頁面 ID
 const pageId = "home";
-const viewRef = db.ref("views/" + pageId);
+const viewRef = ref(db, "views/" + pageId);
 
 // 更新瀏覽次數
-viewRef.transaction(current => (current || 0) + 1);
+runTransaction(viewRef, current => {
+  return (current || 0) + 1;
+});
 
 // 顯示瀏覽次數
-viewRef.on("value", snapshot => {
+onValue(viewRef, snapshot => {
   document.getElementById("viewCount").textContent = "本頁瀏覽次數：" + snapshot.val();
 });
+, ref, onValue, runTransaction } from "https://
