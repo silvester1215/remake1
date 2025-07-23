@@ -1,24 +1,23 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyDuIcIVG24Qdglr9fzFjKbPQdo7bCCdkNQ",
-  authDomain: "timescount-a6205.firebaseapp.com",
-  databaseURL: "https://timescount-a6205-default-rtdb.firebaseio.com",
-  projectId: "timescount-a6205",
-  storageBucket: "timescount-a6205.appspot.com",
-  messagingSenderId: "683380901163",
-  appId: "1:683380901163:web:7d4e483446b2d0d035f16e",
-  measurementId: "G-CC4S2JQDP7"
-};
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDuIcIVG24Qdglr9fzFjKbPQdo7bCCdkNQ",
+    authDomain: "timescount-a6205.firebaseapp.com",
+    projectId: "timescount-a6205",
+    storageBucket: "timescount-a6205.firebasestorage.app",
+    messagingSenderId: "683380901163",
+    appId: "1:683380901163:web:7d4e483446b2d0d035f16e",
+    measurementId: "G-CC4S2JQDP7"
+  };
 
-const pageId = "home";
-const viewRef = db.ref("views/" + pageId);
-
-// 更新瀏覽次數
-viewRef.transaction(current => (current || 0) + 1);
-
-// 顯示瀏覽次數
-viewRef.on("value", snapshot => {
-  document.getElementById("viewCount").textContent = "本頁瀏覽次數：" + snapshot.val();
-});
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
