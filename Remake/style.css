@@ -62,7 +62,7 @@ main {
 footer {
   background-color: #003366;
   color: #fff;
-  display: flex;
+  display: flex: 1;
   justify-content: space-between
   align-items: center;
   padding: 1rem ;
