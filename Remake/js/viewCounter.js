@@ -31,4 +31,3 @@ runTransaction(viewRef, current => {
 onValue(viewRef, snapshot => {
   document.getElementById("viewCount").textContent = "本頁瀏覽次數：" + snapshot.val();
 });
-, ref, onValue, runTransaction } from "https://
