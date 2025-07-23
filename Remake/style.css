@@ -578,6 +578,7 @@ footer {
     display: block;
     width: 100%;
     text-align: center;
+    box-sizing: border-box;
     padding: 0.75rem;
     font-size: 1rem;
     background-color: #0073e6;
