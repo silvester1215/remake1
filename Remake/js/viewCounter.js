@@ -1,4 +1,3 @@
-// 引入 Firebase SDK
 const firebaseConfig = {
   apiKey: "AIzaSyDuIcIVG24Qdglr9fzFjKbPQdo7bCCdkNQ",
   authDomain: "timescount-a6205.firebaseapp.com",
