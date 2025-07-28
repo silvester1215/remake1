@@ -219,43 +219,87 @@ footer #viewCount {
   gap: 2rem;
 }
 
+
 .about-timeline {
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  border-left: 3px solid #007BFF;
   position: relative;
-  margin: 50px 0; /* 移除 auto 置中 */
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
-.timeline-item {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 40px;
-}
-
-.timeline-item::before {
-  content: "";
+/* 中線 */
+.about-timeline::before {
+  content: '';
   position: absolute;
-  left: -9px;
   top: 0;
-  width: 18px;
-  height: 18px;
-  background-color: #007BFF;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* 左右區塊 */
+.timeline-left,
+.timeline-right {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.timeline-left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-right {
+  left: 50%;
+  text-align: left;
+}
+
+/* 圓點標記 */
+.timeline-left::after,
+.timeline-right::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 4px solid #ccc;
   border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 0 2px #007BFF;
+  z-index: 1;
 }
 
-.timeline-item h3 {
-  margin: 0;
+.timeline-left::after {
+  right: -14px;
+}
+
+.timeline-right::after {
+  left: -14px;
+}
+
+/* 清除浮動 */
+.about-timeline::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 標題與段落樣式 */
+.about-timeline h3 {
+  margin-top: 0;
   font-size: 1.2em;
-  color: #333;
+  color: #003d73;
 }
 
-.timeline-item p {
-  margin: 10px 0 0;
-  color: #555;
+.about-timeline p {
+  font-size: 1em;
+  color: #666;
   line-height: 1.6;
 }
 
@@ -538,6 +582,29 @@ footer #viewCount {
   font-size: 1.8rem;
   line-height: 1.4;
   }
+
+  /* timeline 區塊 */
+
+ .timeline-left,
+  .timeline-right {
+    left: 0 !important;
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-left::after,
+  .timeline-right::after {
+    left: 20px;
+    right: auto;
+  }
+
+  .about-timeline::before {
+    left: 20px;
+    transform: none;
+  }
+}
 
   /* Map 區塊 */
   .map-container {
