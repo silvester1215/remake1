@@ -582,7 +582,27 @@ footer #viewCount {
   line-height: 1.4;
   }
 
+  /* timeline 區塊 */
 
+ .timeline-left,
+  .timeline-right {
+    left: 0 !important;
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-left::after,
+  .timeline-right::after {
+    left: 20px;
+    right: auto;
+  }
+
+  .about-timeline::before {
+    left: 20px;
+    transform: none;
+  }
 
   /* Map 區塊 */
   .map-container {
