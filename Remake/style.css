@@ -195,51 +195,17 @@ footer #viewCount {
   font-size: 2.5rem;
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 0.5em;
+  padding-left: 1em; /* 可依需求調整 */
 }
 
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 1em;
-}
-.tax-section {
-  margin-top: 1.5rem;
-  padding-left: 1.5em;
+  padding-left: 1em; /* 可依需求調整 */
 }
 
-.tax-section h3 {
-  font-size: 1.25rem;
-  color: #00509e;
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 1em;
-}
-
-.tax-section h3::before {
-  content: attr(data-number);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-  color: #0077cc;
-  font-size: 1.25rem;
-}
-
-.tax-section p {
-  font-size: 1rem;
-  color: #333;
-  margin: 0.5rem 0;
-}
-
-.tax-section ul {
-  padding-left: 1.5em;
-}
-
-.tax-section li {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+.audit-list {
+  padding-left: 1em; /* 可依需求調整 */
 }
 
 /* 關於我們 */
