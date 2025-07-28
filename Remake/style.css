@@ -219,6 +219,46 @@ footer #viewCount {
   gap: 2rem;
 }
 
+.about-timeline {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  border-left: 3px solid #007BFF;
+  position: relative;
+  margin: 50px 0; /* 移除 auto 置中 */
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #007BFF;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.timeline-item p {
+  margin: 10px 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+
 .about-text {
   flex: 1;
 }
