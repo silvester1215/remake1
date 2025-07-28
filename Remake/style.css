@@ -595,12 +595,12 @@ footer #viewCount {
 
   .timeline-left::after,
   .timeline-right::after {
-    left: 20px;
+    left: 6px;
     right: auto;
   }
 
   .about-timeline::before {
-    left: 20px;
+    left: 18px;
     transform: none;
   }
 
