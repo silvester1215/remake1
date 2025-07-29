@@ -225,7 +225,7 @@ footer #viewCount {
   padding-left: 2em;
 }
 
-.text-section h2::before {
+.services-text h2::before {
   content: attr(data-number);
   position: absolute;
   left: 0;
