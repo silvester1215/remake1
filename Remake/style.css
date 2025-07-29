@@ -189,7 +189,6 @@ footer #viewCount {
 
 .services-text {
   flex: 1;
-  position: relative;
 }
 .service-nav {
   display: flex;
@@ -224,6 +223,7 @@ footer #viewCount {
   color: #003d73;
   margin-bottom: 1rem;
   padding-left: 2em;
+  position: relative;
 }
 
 .services-text h2::before {
