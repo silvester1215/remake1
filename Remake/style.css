@@ -56,6 +56,7 @@ main {
 .navbar nav a:hover {
   color: #ffd700;
 }
+
 /* 頁尾 */
 footer {
   background-color: #003366;
@@ -183,7 +184,7 @@ footer #viewCount {
   padding: 1rem 2rem;
   background-color: #f0f6ff;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .services-text {
@@ -194,18 +195,59 @@ footer #viewCount {
   font-size: 2.5rem;
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 1em; /* 可依需求調整 */
+  padding-left: 0.5em;
 }
 
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 1em; /* 可依需求調整 */
+  padding-left: 1em;
 }
 
-.audit-list {
-  padding-left: 1em; /* 可依需求調整 */
+/* 內文段落樣式 */
+.text-section {
+  margin-top: 1.5rem;
+  padding-left: 2em;
 }
+
+.text-section h3 {
+  font-size: 1.25rem;
+  color: #00509e;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 2em;
+}
+
+.text-section h3::before {
+  content: attr(data-number);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #0077cc;
+  font-size: 1.25rem;
+}
+
+.text-section p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.text-section ul {
+  padding-left: 0em;
+}
+
+.text-section li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* 關於我們 */
 
@@ -392,31 +434,83 @@ footer #viewCount {
 
 /* 文章列表 */
 
-.Library {
+
+.article-carousel {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 垂直靠上 */
-  align-items: flex-start;     /* 水平靠左 */
-  overflow-x: hidden;
-  padding: 1rem 2rem;
+  width: 100vw; /* 滿版寬度 */
+  margin: 0;
+  padding: 2rem 0;
   background-color: #f0f6ff;
-  flex-wrap: wrap;
-  gap: 2rem;
+  overflow: hidden;
 }
 
-.Library-text a {
-  background-color: #0073e6; /* 藍色背景 */
-  color: white;              /* 白色文字 */
-  padding: 0.75rem 1.5rem;   /* 內距 */
-  font-size: 1.1rem;         /* 字體大小 */
-  line-height: 1.6;          /* 行距 */
-  text-align: center;          /* 文字置中 */
-  display: inline-block;     /* 讓寬度配合內容 */
-  border-radius: 10px;       /* 圓角 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-  margin: 2rem 0;            /* 上下留白 */
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  overflow-x: hidden;
+  padding: 0 2rem; /* 可選，讓卡片不貼邊 */
 }
+
+
+.article-card {
+  flex: 0 0 calc((100% - 4rem) / 5); /* 5張卡片，扣除左右 padding */
+  max-width: calc((100% - 4rem) / 5);
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+  overflow: hidden;
+  padding: 2rem;
+  background-color: #f0f6ff;
+}
+
+
+.article-card img.article-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.article-card h3 {
+  font-size: 1.1rem;
+  color: #003d73;
+  margin-bottom: 0.5rem;
+}
+
+.article-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 
 /* 客戶見證 */
 
@@ -549,9 +643,21 @@ footer #viewCount {
 }
 
 /* 響應式調整 */
+
+@media (max-width: 1200px) {
+  .article-card {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
 @media (max-width: 992px) {
   .feature {
     flex: 1 1 calc(50% - 2rem);
+  }
+  .article-card {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
@@ -600,9 +706,10 @@ footer #viewCount {
   }
 
   .about-timeline::before {
-    left: 18px;
+    left:18px;
     transform: none;
   }
+
 
   /* Map 區塊 */
   .map-container {
@@ -721,35 +828,22 @@ footer #viewCount {
   }
 
 /* Library 區塊 */
-.Library {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 2rem 1rem;
-  }
-
-  .Library-text {
-    width: 100%;
-  }
-
-  .Library-text li {
-    list-style: none;
-    margin-bottom: 1rem;
-  }
-
-  .Library-text a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0.75rem;
-    font-size: 1rem;
-    background-color: #0073e6;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  .article-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
+
+@media (max-width: 992px) {
+
+}
+@media (max-width: 600px) {
+  .article-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 
   #backToTop {
     font-size: 1rem;
