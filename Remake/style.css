@@ -222,9 +222,18 @@ footer #viewCount {
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
+.text-section h2::before {
+  content: attr(data-number);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #0077cc;
+  font-size: 1.25rem;
+}
 /* 內文段落樣式 */
 .text-section {
   margin-top: 1.5rem;
@@ -236,7 +245,7 @@ footer #viewCount {
   color: #00509e;
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 2em;
+  
 }
 
 .text-section h3::before {
