@@ -189,6 +189,7 @@ footer #viewCount {
 
 .services-text {
   flex: 1;
+  position: relative;
 }
 .service-nav {
   display: flex;
