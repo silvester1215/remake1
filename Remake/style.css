@@ -282,6 +282,20 @@ html {
 }
 
 
+.about-title {
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: left;
+  background-color: transparent; /* 可選，保持背景一致 */
+}
+
+.about-title h1 {
+  font-size: 2.5rem;
+  color: #003d73;
+  margin: 0;
+}
+
+
 .about-timeline {
   position: relative;
   width: 90%;
