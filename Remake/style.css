@@ -476,6 +476,10 @@ html {
   margin-bottom: 1rem;
 }
 
+.insights-text ol {
+  padding-left: 1em;
+  margin-left: 0;
+}
 /* 文章列表 */
 
 
