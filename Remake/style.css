@@ -222,14 +222,14 @@ footer #viewCount {
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 2em;
+  padding-left: 3.5rem;
   position: relative;
 }
 
 .services-text h2::before {
   content: attr(data-number);
   position: absolute;
-  left: 0;
+  left: 2rem;
   top: 0;
   font-weight: bold;
   color: #003d73;
