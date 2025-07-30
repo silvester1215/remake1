@@ -1,3 +1,4 @@
+
 const track = document.querySelector('.carousel-track');
 const leftArrow = document.querySelector('.arrow.left');
 const rightArrow = document.querySelector('.arrow.right');
@@ -13,12 +14,22 @@ function getScrollStep() {
 let scrollAmount = 0;
 
 leftArrow.addEventListener('click', () => {
-  scrollAmount = Math.max(scrollAmount - getScrollStep(), 0);
+  if (scrollAmount === 0) {
+    // 已在最左邊，跳到最右邊
+    scrollAmount = track.scrollWidth - track.clientWidth;
+  } else {
+    scrollAmount = Math.max(scrollAmount - getScrollStep(), 0);
+  }
   track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
 });
 
 rightArrow.addEventListener('click', () => {
   const maxScroll = track.scrollWidth - track.clientWidth;
-  scrollAmount = Math.min(scrollAmount + getScrollStep(), maxScroll);
+  if (scrollAmount >= maxScroll) {
+    // 已在最右邊，跳到最左邊
+    scrollAmount = 0;
+  } else {
+    scrollAmount = Math.min(scrollAmount + getScrollStep(), maxScroll);
+  }
   track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
 });
