@@ -503,6 +503,7 @@ html {
 
 
 .article-card {
+  position: relative;
   flex: 0 0 calc((100% - 4rem) / 5); /* 5張卡片，扣除左右 padding */
   max-width: calc((100% - 4rem) / 5);
   box-sizing: border-box;
@@ -515,8 +516,20 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
+  padding-bottom: 30px; /* 預留底部空間給日期 */
 }
 
+.article-date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9em;
+  box-sizing: border-box; /* 確保 padding 不影響寬度 */
+}
 
 .arrow {
   position: absolute;
