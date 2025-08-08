@@ -288,6 +288,7 @@ html {
   background-color: #f0f6ff;
   flex-wrap: wrap;
   gap: 2rem;
+  align-items: flex-start;
 }
 
 
@@ -412,7 +413,7 @@ width: 100%;
   flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .about-item {
@@ -428,7 +429,7 @@ width: 100%;
 }
 .about-item h2 {
   color: #003d73;
-  margin-bottom: 1rem;
+  margin-top: 0rem;
 }
 
 .about-item img {
