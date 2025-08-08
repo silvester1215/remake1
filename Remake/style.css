@@ -455,7 +455,9 @@ width: 100%;
   margin: auto;
   display: block;           /* 圖片靠中對齊 */
 }
-
+.about-row {
+    flex-direction: column-reverse !important;
+}
 
 /* 誠峰觀點 */
 
@@ -750,7 +752,7 @@ width: 100%;
 @media (max-width: 768px) {
   /* Hero 區塊 */
   .hero {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     align-items: center;
     text-align: center;
   }
@@ -950,4 +952,3 @@ width: 100%;
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
   }
-
