@@ -750,7 +750,7 @@ width: 100%;
 @media (max-width: 768px) {
   /* Hero 區塊 */
   .hero {
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
   }
@@ -950,3 +950,4 @@ width: 100%;
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
   }
+
