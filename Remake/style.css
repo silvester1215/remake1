@@ -625,7 +625,7 @@ width: 100%;
   max-width: 100%;
   margin: 0 auto; /* 讓容器水平置中 */
   padding: 0;
-  justify-content: center; /* 讓圖片在容器中置中排列 */
+  justify-content: start; /* 讓圖片在容器中置中排列 */
 }
 
 .guide-container img {
@@ -952,6 +952,7 @@ width: 100%;
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
   }
+
 
 
 
