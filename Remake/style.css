@@ -430,7 +430,8 @@ html {
   height: 350px;
   object-fit: cover;       /* 保持比例填滿容器 */
   border-radius: 16px;     /* 可選，讓圖片也有圓角 */
-  float: right;            /* 圖片靠右對齊 */
+  margin: auto;
+  display: block;           /* 圖片靠中對齊 */
 }
 
 
@@ -772,7 +773,6 @@ html {
     left:18px;
     transform: none;
   }
-
 
   /* Map 區塊 */
   .map-container {
