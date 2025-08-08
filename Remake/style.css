@@ -780,7 +780,9 @@ width: 100%;
     left:18px;
     transform: none;
   }
-
+  .about-row {
+    flex-direction: column-reverse !important;
+  }
   /* Map 區塊 */
   .map-container {
     flex-direction: column;
