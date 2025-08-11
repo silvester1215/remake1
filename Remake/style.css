@@ -438,7 +438,9 @@ html {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
 }
 .about-item {
   flex: 1;
