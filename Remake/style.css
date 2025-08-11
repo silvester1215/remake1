@@ -195,7 +195,7 @@ footer #viewCount {
 
 .services {
   display: flex;
-  align-items: center;
+  align-items: top;
   padding: 1rem 2rem;
   background-color: #f0f6ff;
   flex-wrap: wrap;
@@ -211,6 +211,14 @@ footer #viewCount {
   gap: 1rem;
   margin: 1.5rem 0;
   padding-left: 1em;
+}
+
+.service-content {
+  display: none;
+}
+
+.service-content.active {
+  display: block;
 }
 
 .scroll-button {
@@ -237,7 +245,7 @@ footer #viewCount {
 .services-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
-  padding-left: 3.5rem;
+  padding-left: 1rem;
   position: relative;
 }
 
@@ -252,7 +260,7 @@ footer #viewCount {
 /* 內文段落樣式 */
 .text-section {
   margin-top: 1.5rem;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .text-section h3 {
@@ -424,12 +432,13 @@ html {
 
 .about-row {
   display: flex;
-width: 100%;
+  width: 100%;
   flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 2em;
 }
 .about-item {
   flex: 1;
@@ -441,6 +450,9 @@ width: 100%;
 
 .about-item.second {
   flex: 2;
+}
+.about-item p {
+  font-size: 1.2em;
 }
 .about-item h2 {
   color: #003d73;
@@ -952,7 +964,6 @@ width: 100%;
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
   }
-
 
 
 
