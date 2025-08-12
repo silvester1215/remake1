@@ -84,8 +84,14 @@ footer #viewCount {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(to right, #e0f0ff, #f6fbff);
   flex-wrap: wrap;
+  /* ✅ 背景圖 + 漸層淡出 + 原始比例靠右 */
+  background: linear-gradient(to right, rgba(224,240,255,0.95) 0%, rgba(224,240,255,0.6) 20%, rgba(224,240,255,0.3) 40%), url('Album/environment04.jpg') no-repeat right center;
+  background-size: 80% auto; /* 再縮小一點點 */
+  background-position: top right; /* 保持靠右裁切左邊 */
+  background-color: #e0f0ff; /* 左側補上藍色背景 */
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .hero-text {
@@ -985,4 +991,5 @@ justify-content: flex-end; /* 讓地圖靠右 */
     padding: 0.75rem 1.25rem;
   }
 }
+
 
