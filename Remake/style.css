@@ -582,7 +582,7 @@ html {
 }
 
 .arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
+.arrow.right { right: 10px; }{
   overflow: hidden;
   padding: 2rem;
   background-color: #f0f6ff;
@@ -664,19 +664,24 @@ html {
   background-color: #f0f6ff;
 }
 
-.map-container {
+.contact-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding: 2rem;
-  max-width: 900px;
   margin: 0 auto;
-  max-width: 1000px; /* 建議用1000px即可 */
+}
+.map-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end; /* 讓地圖靠右 */
 }
 
 .map-responsive {
+justify-content: flex-end; /* 讓地圖靠右 */
   width: 60%;
   min-width: 300px;
   max-width: 600px;
@@ -696,23 +701,27 @@ html {
 }
 
 .map-text {
+  display: flex;
   flex: 1;
-}
-.map-container .map-text {
-  flex: 1;
-}
+  gap: 2em;
 
-.map-container .map-text h2 {
+}
+  
+.map-text img {
+  max-width: 200px;
+  height: auto;
+}
+.map-text h2 {
   color: #003d73;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-
+  text-align: center;
 }
 
-.map-container .map-text p {
+.map-text p {
   margin-bottom: 0.5rem;
   font-size: 1.05rem;
   color: #333;
@@ -740,6 +749,7 @@ html {
   background-color: #005daa;
   color: #ffffff;
 }
+
 
 /* 響應式調整 */
 
@@ -813,7 +823,7 @@ html {
   }
 
   /* Map 區塊 */
-  .map-container {
+  .contact-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -826,6 +836,11 @@ html {
     align-items: center;
     text-align: center;
     gap: 1.5rem;
+  }
+  .map-text {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
   }
   .map-image {
     width: 80vw;
@@ -842,6 +857,9 @@ html {
   .map-text {
     width: 100%;
   }
+
+
+  
 
   /* Guide 區塊 */
   .guide-container {
@@ -925,7 +943,7 @@ html {
 
   footer div {
     margin-bottom: 5px;
-  
+  }
   footer > div {
     margin-bottom: 10px;
   }
@@ -956,7 +974,7 @@ html {
     flex: 0 0 100%;
     max-width: 90%;
   }
-}
+
   .article-card h3,
   .article-card p {
     font-size: 0.9rem;
@@ -966,6 +984,5 @@ html {
     font-size: 1rem;
     padding: 0.75rem 1.25rem;
   }
-
-
+}
 
